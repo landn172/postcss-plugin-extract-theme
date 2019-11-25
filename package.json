@@ -1,11 +1,15 @@
 {
   "name": "postcss-plugin-extract-theme",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "files": [
     "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:landn172/postcss-plugin-extract-theme.git"
+  },
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib",
