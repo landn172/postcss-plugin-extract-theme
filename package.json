@@ -1,0 +1,33 @@
+{
+  "name": "postcss-plugin-extract-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "babel src -d lib",
+    "prepublishOnly": "rm -rf lib && yarn build && yarn test"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "postcss": "^7.0.23"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/runtime": "^7.7.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
