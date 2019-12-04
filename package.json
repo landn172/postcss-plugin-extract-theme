@@ -1,6 +1,6 @@
 {
   "name": "postcss-plugin-extract-theme",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "license": "MIT",
   "files": [
