@@ -44,12 +44,12 @@ module.exports = postcss.plugin("postcss-plugin-extract-theme", (options = {}) =
       });
 
       if (extractDecl.length) {
-        const eSelector = `${rule.selector}.${themeNames[0]}`;
+        const eSelector = `.${themeNames[0]} ${rule.selector}`;
         extractDecl = extractDecl.map(decl => ({ prop: decl.prop, value: decl.value }))
         ruleCacheMap.set(eSelector, extractDecl);
         rule.parent.append({ selector: eSelector });
 
-        const dSelector = `${rule.selector}.${themeNames[1]}`;
+        const dSelector = `.${themeNames[1]} ${rule.selector}`;
         ruleCacheMap.set(dSelector, extractDecl.map((decl) => {
           return {
             prop: decl.prop,

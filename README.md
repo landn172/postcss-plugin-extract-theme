@@ -17,13 +17,11 @@ will be transform to `light theme` and `dark theme` :
 ```css
 .test {
 }
-
-.test.light {
+.light .test {
   color: #fff;
 }
-
-.test.dark {
-	color: #000;
+.light .test {
+  color: #000;
 }
 ```
 

@@ -23,13 +23,13 @@ const rulesMap = {
 const themeNames = ['light', 'dark']
 
 it("color", async () => {
-  await run(`a { color: #fff; }`, `
+  await run(`a { color: #fff; }`, `  
   a { }
-  a.light {
-      color: #fff
+  .light a {
+    color: #fff
   }
-  a.dark {
-      color: #000
+  .dark a {
+    color: #000
   }`, {
     rulesMap: rulesMap,
     themeNames: themeNames
@@ -39,8 +39,8 @@ it("color", async () => {
 it("borderColor", async () => {
   await run(`a { border: 1px #fff ;}`, `
   a {}
-  a.light { border: 1px #fff ;}
-  a.dark { border: 1px #000 ;}
+  .light a { border: 1px #fff ;}
+  .dark a { border: 1px #000 ;}
   `, {
     rulesMap: rulesMap,
     themeNames: themeNames
@@ -50,8 +50,8 @@ it("borderColor", async () => {
 it("match lowcase", async () => {
   await run(`a { border: 1px #aaa ;}`, `
   a {}
-  a.light { border: 1px #aaa ;}
-  a.dark { border: 1px #dbdbdb ;}
+  .light a { border: 1px #aaa ;}
+  .dark a { border: 1px #dbdbdb ;}
   `, {
     rulesMap: rulesMap,
     themeNames: themeNames
@@ -62,10 +62,10 @@ it("@media color", async () => {
   await run(`@media screen { a { color: #fff; }}`, `
   @media screen { 
     a { }
-    a.light {
+    .light a {
         color: #fff
     }
-    a.dark {
+    .dark a {
         color: #000
     }
   }`, {
